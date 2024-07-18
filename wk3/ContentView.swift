@@ -13,6 +13,12 @@ struct ContentView: View {
     @State private var isShowingItemSheet = false
     @Query(sort: \Expense.date) var expenses: [Expense]
     @State private var expenseToEdit: Expense?
+    
+    @State private var showErrorAlert = false
+    @State private var errorMessage = ""
+    
+    private let offsetValue : CGFloat = -60
+    
     var body: some View {
         NavigationStack {
             List {
@@ -24,7 +30,13 @@ struct ContentView: View {
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
-                        context.delete(expenses[index])
+                        do {
+                            try context.delete(expenses[index])
+                        } catch {
+                            errorMessage = "Failed to delete expense, please try again."
+                            showErrorAlert = true
+                            return
+                        }
                     }
                 }
             }
@@ -54,9 +66,12 @@ struct ContentView: View {
                             isShowingItemSheet = true
                         }
                     })
-                    .offset(y: -60)
+                    .offset(y: offsetValue)
                 }
             }
+            .alert(isPresented: $showErrorAlert, content: {
+                Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            })
         }
     }
 }

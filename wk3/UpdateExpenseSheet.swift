@@ -9,6 +9,8 @@ import SwiftUI
 
 struct UpdateExpenseSheet: View {
     @Environment(\.dismiss) private var dismss
+    @Environment(\.modelContext) private var context
+
     @Bindable var expense: Expense
     var body: some View {
         NavigationStack {
