@@ -23,13 +23,16 @@ class WebsocketViewModel: NSObject, ObservableObject {
     }
     
     func ping(){
-        webSocketTask?.sendPing{ error in
-            if let error = error {
-                print("The web socket ping error is : \(error)")
-            } else {
-                print("I believe the websocket is still active.")
+        DispatchQueue.global().asyncAfter(deadline: .now()+5, execute: {
+            self.ping()
+            self.webSocketTask?.sendPing{ error in
+                if let error = error {
+                    print("The web socket ping error is : \(error)")
+                } else {
+                    print("I believe the websocket is still active.")
+                }
             }
-        }
+        })
     }
     
     func sendMessage(){
