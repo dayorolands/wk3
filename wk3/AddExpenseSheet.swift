@@ -46,13 +46,13 @@ struct AddExpenseSheet: View {
     
     private func saveExpense(){
         guard !name.isEmpty else {
-            errorMessage = "Expense name cannot be empty"
+            errorMessage = "Expense name cannot be empty."
             showErrorAlert = true
             return
         }
         
         guard value > 0 else {
-            errorMessage = "Expense value must be greater than 0"
+            errorMessage = "Expense value must be greater than 0."
             showErrorAlert = true
             return
         }
