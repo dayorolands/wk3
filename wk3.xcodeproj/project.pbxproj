@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E3D118E2C4D04DF00F71E5B /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D118D2C4D04DE00F71E5B /* ColorPickerView.swift */; };
+		8E3D11902C4D058E00F71E5B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D118F2C4D058E00F71E5B /* Line.swift */; };
+		8E3D11922C4D084000F71E5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D11912C4D084000F71E5B /* Constants.swift */; };
+		8E40DE0B2C4EC86300A47A55 /* DrawingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40DE0A2C4EC86300A47A55 /* DrawingScreen.swift */; };
+		8E40DE0F2C4ECDB200A47A55 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40DE0E2C4ECDB200A47A55 /* RecordingView.swift */; };
+		8E40DE112C4EE4C700A47A55 /* AudioRecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40DE102C4EE4C700A47A55 /* AudioRecoder.swift */; };
+		8E40DE132C4EF3AF00A47A55 /* VolumeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40DE122C4EF3AF00A47A55 /* VolumeObserver.swift */; };
 		8EDE329C2C484F0C001F748E /* wk3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE329B2C484F0C001F748E /* wk3App.swift */; };
 		8EDE329E2C484F0C001F748E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE329D2C484F0C001F748E /* ContentView.swift */; };
 		8EDE32A02C484F0E001F748E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EDE329F2C484F0E001F748E /* Assets.xcassets */; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E3D118D2C4D04DE00F71E5B /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		8E3D118F2C4D058E00F71E5B /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		8E3D11912C4D084000F71E5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8E40DE0A2C4EC86300A47A55 /* DrawingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreen.swift; sourceTree = "<group>"; };
+		8E40DE0E2C4ECDB200A47A55 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		8E40DE102C4EE4C700A47A55 /* AudioRecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecoder.swift; sourceTree = "<group>"; };
+		8E40DE122C4EF3AF00A47A55 /* VolumeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeObserver.swift; sourceTree = "<group>"; };
 		8EDE32982C484F0C001F748E /* wk3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wk3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDE329B2C484F0C001F748E /* wk3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wk3App.swift; sourceTree = "<group>"; };
 		8EDE329D2C484F0C001F748E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +46,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E40DE0C2C4ECCBC00A47A55 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				8E3D11912C4D084000F71E5B /* Constants.swift */,
+				8E3D118D2C4D04DE00F71E5B /* ColorPickerView.swift */,
+				8E3D118F2C4D058E00F71E5B /* Line.swift */,
+				8E40DE0A2C4EC86300A47A55 /* DrawingScreen.swift */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		8E40DE0D2C4ECD8100A47A55 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				8E40DE0E2C4ECDB200A47A55 /* RecordingView.swift */,
+				8E40DE102C4EE4C700A47A55 /* AudioRecoder.swift */,
+				8E40DE122C4EF3AF00A47A55 /* VolumeObserver.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
 		8EDE328F2C484F0C001F748E = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +86,8 @@
 		8EDE329A2C484F0C001F748E /* wk3 */ = {
 			isa = PBXGroup;
 			children = (
+				8E40DE0D2C4ECD8100A47A55 /* Audio */,
+				8E40DE0C2C4ECCBC00A47A55 /* Drawing */,
 				8EDE329B2C484F0C001F748E /* wk3App.swift */,
 				8EDE329D2C484F0C001F748E /* ContentView.swift */,
 				8EDE329F2C484F0E001F748E /* Assets.xcassets */,
@@ -137,6 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E40DE0F2C4ECDB200A47A55 /* RecordingView.swift in Sources */,
+				8E3D11922C4D084000F71E5B /* Constants.swift in Sources */,
+				8E3D118E2C4D04DF00F71E5B /* ColorPickerView.swift in Sources */,
+				8E40DE112C4EE4C700A47A55 /* AudioRecoder.swift in Sources */,
+				8E40DE0B2C4EC86300A47A55 /* DrawingScreen.swift in Sources */,
+				8E40DE132C4EF3AF00A47A55 /* VolumeObserver.swift in Sources */,
+				8E3D11902C4D058E00F71E5B /* Line.swift in Sources */,
 				8EDE329E2C484F0C001F748E /* ContentView.swift in Sources */,
 				8EDE329C2C484F0C001F748E /* wk3App.swift in Sources */,
 			);
@@ -275,6 +319,7 @@
 				DEVELOPMENT_TEAM = 32ZV3L2T3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access your microphone to record audio";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +349,7 @@
 				DEVELOPMENT_TEAM = 32ZV3L2T3J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access your microphone to record audio";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
