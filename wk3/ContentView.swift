@@ -8,17 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                List {
+                    NavigationLink(destination: {
+                        DrawingScreen()
+                    }, label: {
+                        Label("Drawing screen", systemImage: "hand.draw")
+                            .labelStyle(.titleAndIcon)
+                            .foregroundColor(.black)
+                    })
+                    .navigationTitle("Combined App")
+                    NavigationLink {
+                        RecordingView()
+                    } label: {
+                        Label("Audio screen", systemImage: "waveform.circle")
+                            .labelStyle(.titleAndIcon)
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+    
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previe: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
